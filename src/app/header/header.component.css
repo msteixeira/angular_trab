@@ -1,0 +1,19 @@
+.header{
+    background: #DCDCDC;
+    padding: 5px;
+}
+.header span{
+    color: #000;
+}
+
+.header h2{
+    color: #fff;
+    text-align: center;
+}
+
+.nav{
+    background: #808080;
+    border-bottom: 4px solid #696969;
+    color: #191970;
+    text-transform: uppercase;
+}

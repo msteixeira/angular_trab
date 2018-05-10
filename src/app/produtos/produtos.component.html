@@ -1,0 +1,29 @@
+<app-header></app-header>
+<div class="container">
+  <h1>Novidades da Semana</h1>
+  <div class="row">
+    <div *ngFor="let p of produtos" class="col-md-2">
+
+      <img style="margin-top: 30px;" src="../../assets/{{p.imagem}}" width="100%">
+      <p>{{p.nome}}</p>
+      <p>{{p.preco | currency: 'BRL':true}}</p>
+      <button class="btn btn-outline-primary" (click)="addCarrinho(p)">Comprar</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Carrinho</h2>
+  <div>
+    <p>Total: {{total | currency:'BRL':true}}</p>
+  </div>
+  <div *ngFor="let item of carrinho">
+    <div class="row">
+      <div class="col-md-2">
+        <img src="../../assets/{{item.imagem}}" width="100%">
+        <div class="col-md-9"> {{item.nome}}</div>
+        <div class="col-md-1">{{item.preco | currency:'BRL':true}}</div>
+      </div>
+    </div>
+  </div>
+</div>

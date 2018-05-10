@@ -1,0 +1,50 @@
+<app-header></app-header>
+
+<div class="container">
+
+  <h1> Pesquisa de CEP </h1>
+
+  <form [formGroup]="formGroup" (ngSubmit)="enviar()" class="form-group">
+    <div>
+      <label>Nome</label>
+      <input formControlName="nome" type="text" class="form-control" />
+      <p *ngIf="formGroup.controls.nome.dirty && formGroup.controls.nome.errors">Valor inválido</p>
+    </div>
+    <div>
+      <label>CEP</label>
+      <input formControlName="cep" type="text" class="form-control" />
+      <p *ngIf="formGroup.controls.cep.dirty && formGroup.controls.cep.errors">Valor inválido</p>
+    </div>
+    <div>
+      <button (click)="consultaCep()" type="button" class="btn btn-primary">Consultar</button>
+    </div>
+    <div>
+      <label>logradouro</label>
+      <input formControlName="logradouro" type="text" class="form-control" />
+      <p *ngIf="formGroup.controls.logradouro.dirty && formGroup.controls.logradouro.errors">Valor inválido</p>
+    </div>
+    <div>
+      <label> complemento</label>
+      <input formControlName=" complemento" type="text" class="form-control" />
+      <p *ngIf="formGroup.controls. complemento.dirty && formGroup.controls. complemento.errors">Valor inválido</p>
+    </div>
+    <div>
+      <label> Bairro</label>
+      <input formControlName="bairro" type="text" class="form-control" />
+      <p *ngIf="formGroup.controls.bairro.dirty && formGroup.controls.bairro.errors">Valor inválido</p>
+    </div>
+    <div>
+      <label>localidade</label>
+      <input formControlName="localidade" type="text" class="form-control" />
+      <p *ngIf="formGroup.controls.localidade.dirty && formGroup.controls.localidade.errors">Valor inválido</p>
+    </div>
+    <div>
+      <label>UF</label>
+      <input formControlName="uf" type="text" class="form-control" />
+      <p *ngIf="formGroup.controls.uf.dirty && formGroup.controls.uf.errors">Valor inválido</p>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-success">Enviar</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div class="container">
+    <h2><strong>Carrinho</strong></h2>
+    <div>
+        <p><strong>Total: {{total | currency:'BRL':true}}</strong></p>
+    </div>
+    <div *ngFor="let item of carrinho">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../../assets/{{item.imagem}}" width="100%">
+                <div class="col-md-12"> {{item.nome}}</div>
+                <div class="col-md-1">{{item.preco | currency:'BRL':true}}</div>
+                <div class="col-md-1"><button class="btn btn-danger" (click)="remove(item)">X</button></div>
+            </div>
+        </div>
+    </div>
+</div>
